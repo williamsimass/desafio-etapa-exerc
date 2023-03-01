@@ -3,7 +3,7 @@ import json
 with open('dados.json', 'r') as f:
     faturamento_diario = json.load(f)
 
-valores_faturamento = [d.get('faturamento', 0) for d in faturamento_diario]
+valores_faturamento = [d.get('valor', 0) for d in faturamento_diario]
 
 menor_faturamento = min(valores_faturamento)
 maior_faturamento = max(valores_faturamento)
